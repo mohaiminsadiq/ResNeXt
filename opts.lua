@@ -40,7 +40,7 @@ function M.parse(arg)
    cmd:option('-momentum',        0.9,   'momentum')
    cmd:option('-weightDecay',     1e-4,  'weight decay')
    ---------- Model options ----------------------------------
-   cmd:option('-netType',      'resnext', 'Options: resnext')
+   cmd:option('-netType',      'resnext_ie', 'Options: resnext | resnext_ie')
    cmd:option('-bottleneckType', 'resnext_C', 'Options: resnet | resnext_B | resnext_C')
    cmd:option('-depth',        34,       'ResNet depth: 18 | 34 | 50 | 101 | ...', 'number')
    cmd:option('-baseWidth',        64,       'ResNet base width', 'number')
