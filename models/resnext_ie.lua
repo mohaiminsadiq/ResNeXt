@@ -186,6 +186,7 @@ local function createModel(opt)
    end
 
    local model = nn.Sequential()
+   local m = 3
    local bottleneck
    if opt.bottleneckType == 'resnet' then 
       bottleneck = resnet_bottleneck
@@ -236,7 +237,7 @@ local function createModel(opt)
       print(' | ResNet-' .. depth .. ' ' .. opt.dataset)
 
       local conv_1_3x3 = nn.ConcatTable()
-      for i=1,m
+      for i=1,m do
          t = nn.Sequential()
          t:add(Convolution(3,64,3,3,1,1,1,1))
          t:add(SBatchNorm(64))
